@@ -1,17 +1,16 @@
 import React from 'react'
 import { useEffect, useState } from "react";
 const placeholders = [
-  "Search jobs...",
+  "Search Quiz...",
   "Search tutorials...",
-  "Search projects...",
-  "Search interview questions...",
-  "Search roadmaps..."
+  "Search StudyMaterial...",
+  "Search Question Bank..."
 ];
 const NavBar = () => {
     const [count, setCount] = useState(0)
   const [placeholderIndex, setPlaceholderIndex] = useState(0);
   const [darkMode, setDarkMode] = useState(false);
-
+    const[focus,setfocus]=useState(false);
   // Animated placeholder
   useEffect(() => {
     const interval = setInterval(() => {
@@ -44,12 +43,14 @@ const NavBar = () => {
         <div className="relative w-1/2 hidden md:block">
           <input
             type="text"
-            placeholder={placeholders[placeholderIndex]}
+            placeholder={focus?"":placeholders[placeholderIndex] || placeholders[0]}
+            onFocus={() => setfocus(true)}
+            onBlur={() => setfocus(false)}
             className="w-full px-5 py-2 rounded-full 
                        bg-black border border-white/20
                        text-white placeholder-gray-400
                        focus:outline-none focus:ring-2 focus:ring-white/40
-                       transition-all duration-500"
+                       transition-all duration-800"
           />
           <span className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400">
             🔍
