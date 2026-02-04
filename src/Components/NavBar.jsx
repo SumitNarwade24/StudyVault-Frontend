@@ -36,7 +36,7 @@ const NavBar = () => {
 
         {/* Logo */}
         <div className="text-2xl font-bold text-white">
-          MyLogo
+          StudyVault
         </div>
 
         {/* Search Bar */}
