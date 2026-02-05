@@ -1,14 +1,19 @@
-import React from 'react'
-import { useEffect, useState } from "react";
-import AfterLoginNavBar from './AfterLoginNavBar';
-import BeforeLoginNavBar from './BeforeLoginNavBar';
-const NavBar = ({isLoggedIn,user}) => {
- 
-  return (
-    <div>
-        {isLoggedIn?<AfterLoginNavBar user={user}/>:<BeforeLoginNavBar/>}
-    </div>
-  )
-}
+import AfterLoginNavBar from "./AfterLoginNavBar";
+import BeforeLoginNavBar from "./BeforeLoginNavBar";
 
-export default NavBar
+const NavBar = ({ isLoggedIn, user, darkMode, setDarkMode }) => {
+  return isLoggedIn ? (
+    <AfterLoginNavBar
+      user={user}
+      darkMode={darkMode}
+      setDarkMode={setDarkMode}
+    />
+  ) : (
+    <BeforeLoginNavBar
+      darkMode={darkMode}
+      setDarkMode={setDarkMode}
+    />
+  );
+};
+
+export default NavBar;
