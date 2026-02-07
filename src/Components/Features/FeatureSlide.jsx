@@ -1,18 +1,24 @@
+import quiz from '../../assets/quiz.svg'
+import document from '../../assets/document.svg'
+import tutorial from '../../assets/tutorial.svg'
 const data = [
   {
     title: "Take Interactive Quizzes",
     desc: "Test your knowledge with instant feedback and progress tracking.",
-    cta: "Start Quiz"
+    cta: "Start Quiz",
+    image: quiz
   },
   {
     title: "Access Notes & Study Material",
     desc: "PDFs, notes and material for quick revision anytime.",
-    cta: "View Notes"
+    cta: "View Notes",
+    image: document
   },
   {
     title: "Watch Curated Tutorials",
     desc: "Handpicked tutorials curated for students.",
-    cta: "Watch Tutorials"
+    cta: "Watch Tutorials",
+    image: tutorial
   }
 ];
 
@@ -45,7 +51,7 @@ const FeatureSlide = ({ featureIndex, animate }) => {
         <div className="w-64 h-64 sm:w-72 sm:h-72 rounded-2xl
                         bg-linear-to-br from-gray-800 to-gray-700
                         flex items-center justify-center text-gray-400">
-          Visual
+          <img src={f.image} alt="Study illustration" className="hero-svg" />
         </div>
       </div>
 

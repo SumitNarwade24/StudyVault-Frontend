@@ -14,7 +14,8 @@ const FeatureShowcase = () => {
   }, []);
 
   return (
-    <section ref={ref} className="bg-black py-20">
+   <section ref={ref} className="bg-black py-14 md:py-16">
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
         {/* FIXED HEIGHT WRAPPER */}

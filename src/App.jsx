@@ -7,10 +7,11 @@ import BeforeLoginNavBar from './Components/BeforeLoginNavBar'
 import AfterLoginNavBar from './Components/AfterLoginNavBar'
 import HeroSection from './Components/Hero/HeroSection'
 import FeatureShowcase from './Components/Features/FeatureShowcase'
+import QuizSection from './Components/quiz/QuizSection'
 
 function App() {
     const [darkMode, setDarkMode] = useState(true);
- let isLoggedIn = true;
+ let isLoggedIn = false;
  const user={name:"Sumit"};
 
  
@@ -28,7 +29,7 @@ function App() {
       />
      <HeroSection/>
      <FeatureShowcase/>
-
+      <QuizSection/>
     </>
   )
 }
